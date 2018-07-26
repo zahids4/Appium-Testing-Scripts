@@ -3,6 +3,8 @@ require 'appium_lib'
 require './SyncJob.rb'
 require './SignInToJob.rb'
 require './NavigateToWorkItemScreen.rb'
+require './CreateBin.rb'
+require './CreateSuspect.rb'
 
 caps = {}
 caps["platformName"] = "iOS"
@@ -19,5 +21,9 @@ driver = Appium::Driver.new({caps: caps, appium_lib: opts}).start_driver
 sync_job(driver)
 sign_in_to_job(driver)
 navigate_to_work_items_screen(driver)
+create_bin(driver)
+create_suspect(driver)
 
 puts "Passed!"
+
+# driver.quit
