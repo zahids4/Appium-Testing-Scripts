@@ -16,14 +16,14 @@ opts = {
     sauce_username: nil,
     server_url: "http://localhost:4723/wd/hub"
 }
-driver = Appium::Driver.new({caps: caps, appium_lib: opts}).start_driver
+driver = Appium::Driver.new({caps: caps, appium_lib: opts}, true).start_driver
 
 sync_job(driver)
 sign_in_to_job(driver)
 navigate_to_work_items_screen(driver)
 create_bin(driver)
-create_suspect(driver)
+# create_suspect(driver)
 
 puts "Passed!"
 
-# driver.quit
+driver.quit
