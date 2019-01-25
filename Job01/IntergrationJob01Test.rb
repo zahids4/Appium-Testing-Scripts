@@ -8,7 +8,7 @@ require './CreateSuspect.rb'
 
 caps = {}
 caps["platformName"] = "iOS"
-caps["platformVersion"] = "11.4"
+caps["platformVersion"] = "12.1"
 caps["deviceName"] = "iPad Pro (10.5-inch)"
 caps["app"] = "/Users/saimzahid/Library/Developer/Xcode/DerivedData/edn_ios_client-awtvpsngjnhcsrfadkxxowclwymw/Build/Products/Debug-iphonesimulator/edn_ios_client.app"
 caps["noReset"] = true
