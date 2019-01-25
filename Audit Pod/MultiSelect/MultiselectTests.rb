@@ -26,6 +26,11 @@ el3.click
 el1 = driver.find_element(:accessibility_id, "View criteria button on row 0")
 el1.click
 
+wait = Selenium::WebDriver::Wait.new(:timeout => 60)
+
+el1 = driver.find_element(:xpath, "//XCUIElementTypeNavigationBar[@name=\"AuditsPackage.CriteriaView\"]/XCUIElementTypeButton")
+el1.click
+
 el4 = driver.find_element(:accessibility_id, "Option on row 0")
 el4.click
 
@@ -40,6 +45,5 @@ el7.click
 
 el8 = driver.find_element(:accessibility_id, "saveAnswer")
 el8.click
-
 
 driver.quit
